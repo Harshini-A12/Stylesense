@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard - StyleSense{% endblock %}
+
+{% block content %}
+<!-- Dashboard Content -->
+<div class="container" style="padding: 3rem 2rem;">
+    <div class="dashboard-header">
+        <h1>Your Personal Styling Dashboard</h1>
+        <p class="dashboard-subtitle">
+            Let AI analyze your features and create the perfect style for you
+        </p>
+    </div>
+
+    <!-- Styling Form -->
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <form id="stylingForm" enctype="multipart/form-data">
+            <!-- Image Upload -->
+            <div class="form-group">
+                <label class="form-label">Upload Your Photo</label>
+                <div class="file-upload-wrapper">
+                    <input type="file" id="imageInput" name="image" class="file-upload-input" accept="image/*" required>
+                    <label for="imageInput" class="file-upload-label">
+                        <div>
+                            <div class="file-upload-icon">📸</div>
+                            <div class="file-upload-text">
+                                Click to upload your facial image
+                                <br>
+                                <small style="color: var(--text-muted);">JPG, PNG or WEBP (Max 16MB)</small>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div id="imagePreview" class="file-preview" style="display: none;">
+                    <img id="previewImage" src="" alt="Preview">
+                </div>
+            </div>
+
+            <!-- Gender Selection -->
+            <div class="form-group">
+                <label class="form-label">Gender</label>
+                <select name="gender" class="form-select" required>
+                    <option value="">Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-binary">Non-binary</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <!-- Age Input -->
+            <div class="form-group">
+                <label class="form-label">Age</label>
+                <input type="number" name="age" class="form-input" placeholder="Enter your age" min="13" max="100"
+                    required>
+            </div>
+
+            <!-- Occasion Selection -->
+            <div class="form-group">
+                <label class="form-label">Occasion / Event</label>
+                <select name="occasion" id="occasionSelect" class="form-select" required>
+                    <option value="">Select occasion</option>
+                    <option value="Formal">Formal</option>
+                    <option value="Casual">Casual</option>
+                    <option value="Party">Party</option>
+                    <option value="Business">Business</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Date Night">Date Night</option>
+                    <option value="Festival">Festival</option>
+                    <option value="Custom">Custom Event</option>
+                </select>
+            </div>
+
+            <!-- Custom Occasion Input (Hidden by default) -->
+            <div class="form-group" id="customOccasionGroup" style="display: none;">
+                <label class="form-label">Custom Event Details</label>
+                <input type="text" name="custom_occasion" id="customOccasionInput" class="form-input"
+                    placeholder="Describe your event">
+            </div>
+
+            <!-- Budget Selection -->
+            <div class="form-group">
+                <label class="form-label">Budget Range</label>
+                <select name="budget" class="form-select" required>
+                    <option value="">Select your budget</option>
+                    <option value="₹1,000 - ₹3,000">₹1,000 - ₹3,000 (Budget-friendly)</option>
+                    <option value="₹3,000 - ₹7,000">₹3,000 - ₹7,000 (Moderate)</option>
+                    <option value="₹7,000 - ₹15,000">₹7,000 - ₹15,000 (Premium)</option>
+                    <option value="₹15,000+">₹15,000+ (Luxury)</option>
+                </select>
+            </div>
+
+            <!-- Preferred Colors (Optional) -->
+            <div class="form-group">
+                <label class="form-label">
+                    Preferred Colors (Optional)
+                </label>
+                <input type="text" name="preferred_colors" class="form-input"
+                    placeholder="e.g., Blue, Beige, Pastels (leave empty if no preference)">
+                <small style="color: var(--text-muted); font-size: 0.85rem; display: block; margin-top: 0.5rem;">
+                    You can skip this if you want AI to decide the best colors for you
+                </small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                ✨ Generate My Perfect Style
+            </button>
+        </form>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <p style="color: var(--text-secondary); font-weight: 500;">
+                Creating your personalized style recommendations...
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Image Preview
+    const imageInput = document.getElementById('imageInput');
+    const imagePreview = document.getElementById('imagePreview');
+    const previewImage = document.getElementById('previewImage');
+
+    imageInput.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                imagePreview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Custom Occasion Toggle
+    const occasionSelect = document.getElementById('occasionSelect');
+    const customOccasionGroup = document.getElementById('customOccasionGroup');
+    const customOccasionInput = document.getElementById('customOccasionInput');
+
+    occasionSelect.addEventListener('change', function () {
+        if (this.value === 'Custom') {
+            customOccasionGroup.style.display = 'block';
+            customOccasionInput.required = true;
+        } else {
+            customOccasionGroup.style.display = 'none';
+            customOccasionInput.required = false;
+        }
+    });
+
+    // Form Submission
+    const stylingForm = document.getElementById('stylingForm');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+
+    stylingForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Show loading
+        loadingIndicator.classList.add('active');
+        stylingForm.style.display = 'none';
+
+        // Prepare form data
+        const formData = new FormData(stylingForm);
+
+        try {
+            const response = await fetch('{{ url_for("generate_styling") }}', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                window.location.href = result.redirect;
+            } else {
+                alert('Error: ' + (result.error || 'Something went wrong'));
+                loadingIndicator.classList.remove('active');
+                stylingForm.style.display = 'block';
+            }
+        } catch (error) {
+            alert('Error: ' + error.message);
+            loadingIndicator.classList.remove('active');
+            stylingForm.style.display = 'block';
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,415 @@
+{% extends "layout.html" %}
+
+{% block title %}Your Style Recommendations - StyleSense{% endblock %}
+
+{% block content %}
+<!-- Results Content -->
+<div class="result-container">
+    <div class="result-header">
+        <h1>Your Personalized Style Recommendations</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">
+            Curated just for you by our AI fashion expert ✨
+        </p>
+    </div>
+
+    <!-- User Info Summary -->
+    <div class="user-info">
+        <div class="info-item">
+            <div class="info-label">Skin Tone</div>
+            <div class="info-value">{{ user_data.skin_tone }}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Gender</div>
+            <div class="info-value">{{ user_data.gender }}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Age</div>
+            <div class="info-value">{{ user_data.age }}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Occasion</div>
+            <div class="info-value">{{ user_data.occasion }}</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">Budget</div>
+            <div class="info-value">{{ user_data.budget }}</div>
+        </div>
+    </div>
+
+    <!-- Outfit Recommendations -->
+    <div class="result-section">
+        <h2>
+            <span class="section-icon">👔</span>
+            Your Perfect Outfit
+        </h2>
+        <div class="outfit-grid">
+            <div class="outfit-item">
+                <div class="outfit-item-title">Top</div>
+                <div class="outfit-item-content">{{ result.outfit.top }}</div>
+            </div>
+            <div class="outfit-item">
+                <div class="outfit-item-title">Bottom</div>
+                <div class="outfit-item-content">{{ result.outfit.bottom }}</div>
+            </div>
+            <div class="outfit-item">
+                <div class="outfit-item-title">Shoes</div>
+                <div class="outfit-item-content">{{ result.outfit.shoes }}</div>
+            </div>
+            <div class="outfit-item">
+                <div class="outfit-item-title">Accessories</div>
+                <div class="outfit-item-content">{{ result.outfit.accessories }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hairstyle Recommendation -->
+    <div class="result-section">
+        <h2>
+            <span class="section-icon">💇</span>
+            Recommended Hairstyle
+        </h2>
+        <div class="card">
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                {{ result.hairstyle }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="result-section">
+        <h2>
+            <span class="section-icon">🎨</span>
+            Your Color Palette
+        </h2>
+        <div class="color-palette" id="colorPalette">
+            <div class="color-swatch">
+                <div class="color-circle" id="primaryColor" data-color="{{ result.color_palette.primary }}"></div>
+                <div class="color-name">{{ result.color_palette.primary }}</div>
+                <div class="color-label">Primary</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" id="secondaryColor" data-color="{{ result.color_palette.secondary }}"></div>
+                <div class="color-name">{{ result.color_palette.secondary }}</div>
+                <div class="color-label">Secondary</div>
+            </div>
+            <div class="color-swatch">
+                <div class="color-circle" id="accentColor" data-color="{{ result.color_palette.accent }}"></div>
+                <div class="color-name">{{ result.color_palette.accent }}</div>
+                <div class="color-label">Accent</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Style Explanation -->
+    <div class="result-section">
+        <h2>
+            <span class="section-icon">💡</span>
+            Why This Style Works for You
+        </h2>
+        <div class="explanation-text">
+            {{ result.explanation }}
+        </div>
+    </div>
+
+    <!-- Shopping Recommendations -->
+    <div class="result-section">
+        <h2>
+            <span class="section-icon">🛍️</span>
+            Shop Your Look
+        </h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+            Click on any keyword to search on your favorite shopping platform
+        </p>
+
+        <div class="shopping-platforms">
+            <!-- Amazon India -->
+            <div class="platform-card">
+                <div class="platform-name">🛒 Amazon India</div>
+                <ul class="keyword-list">
+                    {% for keyword in result.shopping_keywords.amazon_india %}
+                    <li>
+                        <a href="https://www.amazon.in/s?k={{ keyword|urlencode }}" target="_blank"
+                            class="keyword-link">
+                            {{ keyword }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Myntra -->
+            <div class="platform-card">
+                <div class="platform-name">👗 Myntra</div>
+                <ul class="keyword-list">
+                    {% for keyword in result.shopping_keywords.myntra %}
+                    <li>
+                        <a href="https://www.myntra.com/{{ keyword|replace(' ', '-')|lower }}" target="_blank"
+                            class="keyword-link">
+                            {{ keyword }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Zara -->
+            <div class="platform-card">
+                <div class="platform-name">👔 Zara</div>
+                <ul class="keyword-list">
+                    {% for keyword in result.shopping_keywords.zara %}
+                    <li>
+                        <a href="https://www.zara.com/in/en/search?searchTerm={{ keyword|urlencode }}&section={% if user_data.gender == 'Male' %}MAN{% else %}WOMAN{% endif %}"
+                            target="_blank" class="keyword-link">
+                            {{ keyword }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Ajio -->
+            <div class="platform-card">
+                <div class="platform-name">🎽 Ajio</div>
+                <ul class="keyword-list">
+                    {% for keyword in result.shopping_keywords.ajio %}
+                    <li>
+                        <a href="https://www.ajio.com/search/?text={{ keyword|urlencode }}" target="_blank"
+                            class="keyword-link">
+                            {{ keyword }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Nykaa Fashion -->
+            <div class="platform-card">
+                <div class="platform-name">💄 Nykaa Fashion</div>
+                <ul class="keyword-list">
+                    {% for keyword in result.shopping_keywords.nykaa_fashion %}
+                    <li>
+                        <a href="https://www.nykaafashion.com/catalogsearch/result/?q={{ keyword|urlencode }}"
+                            target="_blank" class="keyword-link">
+                            {{ keyword }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section">
+        <h3>Share Your Style ✨</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Show off your personalized recommendations to friends and family
+        </p>
+        <div class="share-buttons">
+            <a href="#" id="shareWhatsApp" class="share-btn share-btn-whatsapp">
+                📱 Share on WhatsApp
+            </a>
+            <a href="#" id="shareInstagram" class="share-btn share-btn-instagram">
+                📸 Share on Instagram
+            </a>
+            <button id="shareGeneric" class="share-btn share-btn-generic">
+                🔗 Copy Link
+            </button>
+        </div>
+    </div>
+
+    <!-- Back to Dashboard -->
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary btn-large">
+            ← Create Another Style
+        </a>
+    </div>
+</div>
+
+<!-- Toast notification element -->
+<div id="toast" class="toast"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // ====================================
+    // COLOR NAME TO HEX MAPPER
+    // ====================================
+    const COLOR_MAP = {
+        // Reds
+        'red': '#DC3545', 'dark red': '#8B0000', 'crimson': '#DC143C', 'scarlet': '#FF2400',
+        'maroon': '#800000', 'burgundy': '#800020', 'wine': '#722F37', 'cherry': '#DE3163',
+        'ruby': '#E0115F', 'vermilion': '#E34234', 'rust': '#B7410E',
+        // Pinks
+        'pink': '#FFC0CB', 'hot pink': '#FF69B4', 'deep pink': '#FF1493',
+        'blush': '#DE5D83', 'rose': '#FF007F', 'salmon': '#FA8072',
+        'coral': '#FF7F50', 'magenta': '#FF00FF', 'fuchsia': '#FF00FF',
+        'mauve': '#E0B0FF', 'dusty rose': '#DCAE96',
+        // Oranges
+        'orange': '#FF8C00', 'tangerine': '#FF9966', 'peach': '#FFDAB9',
+        'apricot': '#FBCEB1', 'amber': '#FFBF00', 'terracotta': '#E2725B',
+        'saffron': '#F4C430', 'saffron orange': '#FF8C00',
+        // Yellows
+        'yellow': '#FFD700', 'gold': '#FFD700', 'mustard': '#FFDB58',
+        'lemon': '#FFF44F', 'cream': '#FFFDD0', 'ivory': '#FFFFF0',
+        'champagne': '#F7E7CE', 'butter': '#FFE680',
+        // Greens
+        'green': '#2E8B57', 'dark green': '#006400', 'forest green': '#228B22',
+        'emerald': '#50C878', 'emerald green': '#50C878', 'olive': '#808000',
+        'olive green': '#6B8E23', 'sage': '#BCB88A', 'sage green': '#B2AC88',
+        'mint': '#98FF98', 'mint green': '#98FF98', 'lime': '#32CD32',
+        'teal': '#008080', 'jade': '#00A86B', 'moss': '#8A9A5B',
+        'khaki': '#C3B091', 'army green': '#4B5320',
+        // Blues
+        'blue': '#4169E1', 'navy': '#000080', 'navy blue': '#000080',
+        'royal blue': '#4169E1', 'sky blue': '#87CEEB', 'baby blue': '#89CFF0',
+        'powder blue': '#B0E0E6', 'cobalt': '#0047AB', 'cobalt blue': '#0047AB',
+        'steel blue': '#4682B4', 'slate blue': '#6A5ACD', 'denim': '#1560BD',
+        'denim blue': '#1560BD', 'indigo': '#4B0082', 'cerulean': '#007BA7',
+        'turquoise': '#40E0D0', 'aqua': '#00FFFF', 'cyan': '#00FFFF',
+        'electric blue': '#7DF9FF',
+        // Purples
+        'purple': '#800080', 'dark purple': '#301934', 'violet': '#7F00FF',
+        'lavender': '#E6E6FA', 'lilac': '#C8A2C8', 'plum': '#8E4585',
+        'orchid': '#DA70D6', 'amethyst': '#9966CC', 'periwinkle': '#CCCCFF',
+        'eggplant': '#614051',
+        // Browns
+        'brown': '#8B4513', 'dark brown': '#654321', 'chocolate': '#7B3F00',
+        'tan': '#D2B48C', 'beige': '#F5F5DC', 'taupe': '#483C32',
+        'camel': '#C19A6B', 'bronze': '#CD7F32', 'copper': '#B87333',
+        'coffee': '#6F4E37', 'mocha': '#967969', 'chestnut': '#954535',
+        'cinnamon': '#D2691E', 'sienna': '#A0522D', 'mahogany': '#C04000',
+        // Neutrals
+        'black': '#1A1A1A', 'white': '#FFFFFF', 'off white': '#FAF9F6',
+        'grey': '#808080', 'gray': '#808080', 'charcoal': '#36454F',
+        'charcoal grey': '#36454F', 'charcoal gray': '#36454F',
+        'silver': '#C0C0C0', 'ash': '#B2BEB5', 'slate': '#708090',
+        'pearl': '#F0EAD6',
+        // Deep / Rich
+        'deep red': '#8B0000', 'deep blue': '#00008B', 'deep green': '#006400',
+        'deep purple': '#301934', 'deep pink': '#FF1493',
+        // Metallics  
+        'rose gold': '#B76E79', 'platinum': '#E5E4E2',
+    };
+
+    function colorNameToHex(name) {
+        if (!name) return '#808080';
+        const lower = name.toLowerCase().trim();
+
+        // Direct match
+        if (COLOR_MAP[lower]) return COLOR_MAP[lower];
+
+        // Try partial match
+        for (const [key, hex] of Object.entries(COLOR_MAP)) {
+            if (lower.includes(key) || key.includes(lower)) return hex;
+        }
+
+        // Check if it's already a hex value
+        if (lower.startsWith('#')) return lower;
+
+        // Try as CSS color (browser may recognize it)
+        const testEl = document.createElement('div');
+        testEl.style.color = lower;
+        if (testEl.style.color) {
+            return lower; // Browser recognizes it
+        }
+
+        // Default fallback with a nice gradient
+        return '#808080';
+    }
+
+    // Apply colors to palette circles
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.color-circle[data-color]').forEach(circle => {
+            const colorName = circle.getAttribute('data-color');
+            const hexColor = colorNameToHex(colorName);
+            circle.style.backgroundColor = hexColor;
+        });
+    });
+
+    // ====================================
+    // TOAST NOTIFICATION
+    // ====================================
+    function showToast(message, duration = 3000) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    // ====================================
+    // SHARE FUNCTIONALITY
+    // ====================================
+    const shareData = {
+        skinTone: '{{ user_data.skin_tone }}',
+        occasion: '{{ user_data.occasion }}',
+        budget: '{{ user_data.budget }}',
+        primary: '{{ result.color_palette.primary }}',
+        secondary: '{{ result.color_palette.secondary }}',
+        accent: '{{ result.color_palette.accent }}',
+        top: `{{ result.outfit.top | replace("'", "\\'") | replace("\n", " ") }}`,
+        bottom: `{{ result.outfit.bottom | replace("'", "\\'") | replace("\n", " ") }}`,
+    };
+
+    const shareText =
+        `✨ Check out my personalized style recommendations from StyleSense! 🎨\n\n` +
+        `👤 Skin Tone: ${shareData.skinTone}\n` +
+        `📅 Occasion: ${shareData.occasion}\n` +
+        `💰 Budget: ${shareData.budget}\n\n` +
+        `👔 Outfit:\n` +
+        `  Top: ${shareData.top}\n` +
+        `  Bottom: ${shareData.bottom}\n\n` +
+        `🎨 Color Palette: ${shareData.primary}, ${shareData.secondary}, ${shareData.accent}\n\n` +
+        `🛍️ Shop at:\n` +
+        `  • Amazon India: https://www.amazon.in\n` +
+        `  • Myntra: https://www.myntra.com\n` +
+        `  • Zara: https://www.zara.com/in\n` +
+        `  • Ajio: https://www.ajio.com\n` +
+        `  • Nykaa Fashion: https://www.nykaafashion.com\n\n` +
+        `Get your personalized style at StyleSense! ✨`;
+
+    // WhatsApp Share
+    document.getElementById('shareWhatsApp').addEventListener('click', function (e) {
+        e.preventDefault();
+        const encodedText = encodeURIComponent(shareText);
+        window.open('https://wa.me/?text=' + encodedText, '_blank');
+    });
+
+    // Instagram Share (Copy to clipboard)
+    document.getElementById('shareInstagram').addEventListener('click', function (e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(shareText).then(function () {
+            showToast('📸 Text copied! Paste it in your Instagram post or story.');
+        }).catch(function () {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = shareText;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast('📸 Text copied! Paste it in your Instagram post or story.');
+        });
+    });
+
+    // Generic Share (Copy)
+    document.getElementById('shareGeneric').addEventListener('click', function () {
+        navigator.clipboard.writeText(shareText).then(function () {
+            showToast('🔗 Content copied to clipboard! Share it anywhere. ✨');
+        }).catch(function () {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = shareText;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showToast('🔗 Content copied to clipboard! Share it anywhere. ✨');
+        });
+    });
+</script>
+{% endblock %}

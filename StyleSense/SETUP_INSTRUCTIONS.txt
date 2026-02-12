@@ -1,0 +1,143 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         STYLESENSE - SETUP INSTRUCTIONS                          ║
+║         Quick Start Guide for Environment Configuration          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+IMPORTANT: ENVIRONMENT VARIABLE SETUP
+=====================================
+
+The .env file is CRITICAL for the application to work. It contains your API keys.
+
+OPTION 1: If .env file is present (already downloaded)
+-------------------------------------------------------
+1. Open the .env file in a text editor
+2. Replace "your_groq_api_key_here" with your actual Groq API key
+3. Replace "your_secret_flask_key_here" with a random secret string
+4. Save the file
+
+OPTION 2: If .env file is missing (common on Windows/Mac)
+----------------------------------------------------------
+1. Open the file named "env.txt"
+2. Follow the instructions inside
+3. Copy the content and create a new file named ".env" (note the dot!)
+4. Paste the content into .env
+5. Replace the placeholder values with your actual keys
+6. Save the file in the same folder as app.py
+
+HOW TO CREATE THE .env FILE MANUALLY:
+=====================================
+
+Step 1: Create the file
+-----------------------
+• On Windows: 
+  - Open Notepad
+  - Save as ".env" (include quotes to force the dot)
+  - Change "Save as type" to "All Files"
+  
+• On Mac/Linux:
+  - Open Terminal
+  - Navigate to stylesense folder
+  - Run: touch .env
+  - Or use any text editor and save as ".env"
+
+Step 2: Add the following content to .env:
+------------------------------------------
+
+GROQ_API_KEY=your_groq_api_key_here
+SECRET_KEY=your_secret_flask_key_here
+
+
+Step 3: Get your Groq API Key:
+-------------------------------
+1. Visit: https://console.groq.com
+2. Sign up or login
+3. Click on "API Keys" in the left sidebar
+4. Click "Create API Key"
+5. Give it a name (e.g., "StyleSense")
+6. Copy the API key (it starts with "gsk_")
+7. Paste it in .env replacing "your_groq_api_key_here"
+
+Step 4: Generate a Secret Key:
+-------------------------------
+Option A - Use Python:
+  python -c "import secrets; print(secrets.token_hex(32))"
+  
+Option B - Use any random string (32+ characters recommended):
+  Example: mysupersecretkey123456789abcdefghijk
+
+Step 5: Final .env file should look like:
+-----------------------------------------
+
+GROQ_API_KEY=gsk_abc123xyz456def789ghi012jkl345mno678pqr901stu234vwx
+SECRET_KEY=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
+
+
+VERIFY YOUR SETUP:
+==================
+
+After creating the .env file, verify it's correct:
+
+1. The file must be named ".env" (with a dot, no extension)
+2. It must be in the stylesense folder (same level as app.py)
+3. It must contain both GROQ_API_KEY and SECRET_KEY
+4. Values should NOT have quotes around them
+5. No spaces before or after the = sign is fine
+
+Your folder structure should look like:
+stylesense/
+├── .env                  ← THIS FILE MUST EXIST
+├── app.py
+├── requirements.txt
+├── database.json
+├── README.md
+├── templates/
+└── static/
+
+
+INSTALLATION & RUNNING:
+=======================
+
+After setting up .env:
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run the application:
+   python app.py
+
+3. Open browser:
+   http://localhost:5000
+
+
+TROUBLESHOOTING:
+================
+
+Problem: "GROQ_API_KEY not found" error
+Solution: .env file is not in the correct location or not named correctly
+
+Problem: Can't create .env file on Windows
+Solution: Use the "env.txt" method described above
+
+Problem: API key not working
+Solution: Make sure you copied the complete key from Groq Console
+          The key should start with "gsk_"
+
+Problem: Application won't start
+Solution: Check that all values in .env are filled in (no placeholders)
+
+
+NEED HELP?
+==========
+
+1. Read the full README.md file
+2. Check that .env file exists and is configured
+3. Verify you have Python 3.8+ installed
+4. Make sure all dependencies are installed
+5. Check your Groq API key is valid at https://console.groq.com
+
+
+═══════════════════════════════════════════════════════════════════
+
+Good luck with StyleSense! 🎨✨
+
+═══════════════════════════════════════════════════════════════════

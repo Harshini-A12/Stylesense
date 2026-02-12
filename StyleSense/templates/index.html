@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <!-- Decorative Graphics -->
+    <div class="hero-graphic hero-graphic-left"></div>
+    <div class="hero-graphic hero-graphic-right"></div>
+
+    <div class="hero-content">
+        <h1 class="brand-name">StyleSense</h1>
+        <p class="hero-subtitle">AI-Powered Fashion Styling</p>
+        <p class="hero-description">
+            Discover your perfect style with our cutting-edge AI technology.
+            Get personalized outfit recommendations based on your unique features,
+            preferences, and occasion.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ url_for('signup') }}" class="btn btn-primary btn-large">
+                ✨ Get Started
+            </a>
+            <a href="{{ url_for('login') }}" class="btn btn-secondary btn-large">
+                Login
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section-dark" style="padding: 5rem 2rem;">
+    <div class="container">
+        <h2
+            style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; background: var(--gradient-dark); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            Why Choose StyleSense?
+        </h2>
+        <p
+            style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Your personal AI stylist that understands your unique features and crafts the perfect look
+        </p>
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Skin Tone Analysis</h3>
+                <p class="feature-desc">
+                    Advanced AI detects your skin tone and recommends colors
+                    that perfectly complement your natural beauty.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="feature-icon">👗</div>
+                <h3 class="feature-title">Personalized Outfits</h3>
+                <p class="feature-desc">
+                    Get complete outfit recommendations tailored to your age,
+                    gender, occasion, and budget preferences.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="feature-icon">🛍️</div>
+                <h3 class="feature-title">Smart Shopping</h3>
+                <p class="feature-desc">
+                    Direct shopping links to Amazon, Myntra, Zara, Ajio, and
+                    Nykaa Fashion for easy purchase.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section-glow" style="padding: 5rem 2rem;">
+    <div class="container">
+        <h2
+            style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; background: var(--gradient-dark); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            How It Works
+        </h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Create Your Account</h3>
+                    <p>Sign up with a valid email and secure password.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Upload Your Photo</h3>
+                    <p>Share a clear facial image for skin tone analysis.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Share Your Preferences</h3>
+                    <p>Tell us about your occasion, budget, and style preferences.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>Get Your Perfect Style</h3>
+                    <p>Receive personalized outfit recommendations with shopping links!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden;">
+    <!-- Decorative glow -->
+    <div
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 300px; background: radial-gradient(ellipse, rgba(155, 89, 232, 0.1) 0%, transparent 70%); pointer-events: none;">
+    </div>
+    <div class="container" style="position: relative; z-index: 1;">
+        <h2
+            style="font-size: 2.8rem; margin-bottom: 1rem; background: var(--gradient-dark); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            Ready to Transform Your Style?
+        </h2>
+        <p
+            style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Join thousands of fashion-forward individuals who trust StyleSense
+            for their personalized styling needs.
+        </p>
+        <a href="{{ url_for('signup') }}" class="btn btn-primary btn-large">
+            ✨ Start Your Style Journey
+        </a>
+    </div>
+</section>
+{% endblock %}

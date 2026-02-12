@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}StyleSense - AI-Powered Fashion Styling{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-icon">✨</span>
+                StyleSense
+            </a>
+            <div class="nav-links">
+                {% if session.get('user_email') %}
+                <span style="color: var(--text-muted); margin-right: 1rem;">{{ session.get('user_email') }}</span>
+                {% if request.endpoint != 'dashboard' %}
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('signup') }}">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p
+                style="margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 2px; background: var(--gradient-dark); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                StyleSense
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                AI-Powered Fashion Styling © 2024
+            </p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

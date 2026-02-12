@@ -1,0 +1,687 @@
+{
+  "users": [
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "password": "scrypt:32768:8:1$h5e9ODDLnasZY80x$c48e73e74f72271e7dfa4706e78d82aaea9853f6477a3895fd8197f1abcde75af77d98f34712e4e905127b5dac021a40b5c7e2cab9b44fb34265475516d90f77",
+      "created_at": "2026-02-11T20:42:44.605394"
+    },
+    {
+      "email": "saiharshinivalavoju@gmail.com",
+      "password": "scrypt:32768:8:1$ZlCnn2pzZ9P6f3qj$035489e550d78b8a51ecb1ea269afe4a430071576d40b0e3f3dd08d94bdfe34922cfe928aaad23e502a09cd2eab6d3c74954fb3980dfc7f2edc22a8f2de4b114",
+      "created_at": "2026-02-12T11:16:33.978479"
+    }
+  ],
+  "styling_history": [
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-11T20:43:19.356782",
+      "occasion": "Wedding",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "20",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "A pastel pink or peach-colored blouse with intricate embroidery, made of lightweight fabric such as chiffon or georgette, and featuring a round neckline and cap sleeves.",
+          "bottom": "A floor-length, dark green or burgundy-colored lehenga with a flared silhouette, adorned with gold or silver sequins and a subtle sheen.",
+          "shoes": "A pair of gold or silver-colored ankle-strap sandals with a moderate heel, featuring delicate straps and a minimalist design.",
+          "accessories": "A statement gold or silver-colored necklace with a floral or geometric pattern, paired with a pair of chandelier earrings and a simple, elegant clutch."
+        },
+        "hairstyle": "A braided updo with loose, soft waves framing the face, adorned with a few strategically-placed hairpins and a sprinkle of hair accessories such as pearls or rhinestones.",
+        "color_palette": {
+          "primary": "Soft Peach",
+          "secondary": "Rich Gold",
+          "accent": "Deep Emerald"
+        },
+        "explanation": "The recommended outfit and color palette are tailored to complement the user's olive skin tone, youthful age, and the wedding occasion. The soft peach and rich gold colors will create a warm, sun-kissed glow on the user's skin, while the deep emerald accent will add a pop of contrast and sophistication. The floor-length lehenga and braided updo will create a elegant, polished look, suitable for a wedding. The budget of \u20b91,000 - \u20b93,000 will allow for a mix of high-street and affordable luxury brands, offering a range of options for the user to choose from.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "peach blouse",
+            "lehenga choli",
+            "ankle strap sandals",
+            "gold necklace",
+            "braided hair accessories"
+          ],
+          "myntra": [
+            "soft peach tops",
+            "dark green lehengas",
+            "silver sandals",
+            "statement necklaces",
+            "hair clips"
+          ],
+          "zara": [
+            "pastel pink blouses",
+            "floral embroidered tops",
+            "high heel sandals",
+            "sequined clutch",
+            "minimalist earrings"
+          ],
+          "ajio": [
+            "georgette blouses",
+            "burgundy lehengas",
+            "gold anklets",
+            "floral hair clips",
+            "embellished clutches"
+          ],
+          "nykaa_fashion": [
+            "peach colored dresses",
+            "green lehengas",
+            "silver juttis",
+            "gold plated necklaces",
+            "hair pins"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-11T20:45:31.685407",
+      "occasion": "Wedding",
+      "skin_tone": "Olive",
+      "gender": "Male",
+      "age": "15",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "A light beige or cream-colored kurta with intricate embroidery, made of cotton or silk blend, to complement the olive skin tone and keep the overall look elegant and modern for a wedding.",
+          "bottom": "A pair of dark brown or beige trousers, preferably in linen or cotton, to match the kurta and add a touch of sophistication.",
+          "shoes": "Brown leather mojaris or loafers, which are both comfortable and stylish, suitable for a wedding occasion and within the given budget.",
+          "accessories": "A simple, elegant watch and a pair of cufflinks in a subtle, earthy tone to complement the overall outfit without overpowering it."
+        },
+        "hairstyle": "A neatly combed, side-parted hairstyle with a hint of texture or a slight pompadour to add a modern, trendy touch, suitable for a 15-year-old attending a wedding.",
+        "color_palette": {
+          "primary": "Beige",
+          "secondary": "Dark Brown",
+          "accent": "Earth Green"
+        },
+        "explanation": "The recommended outfit and colors are chosen to complement the user's olive skin tone by balancing warm and cool tones. The beige and dark brown colors are earthy and natural, which suit the olive skin tone. The earth green accent adds a touch of vibrancy without overpowering the overall look. The outfit is modern, elegant, and suitable for a wedding occasion, considering the user's age and budget. The light, breathable fabrics and comfortable shoes ensure the outfit is practical and comfortable for a long event.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "wedding kurta for men",
+            "beige trousers",
+            "brown mojari shoes",
+            "men's cufflinks",
+            "earth tone watches"
+          ],
+          "myntra": [
+            "men's wedding wear",
+            "linen trousers",
+            "leather loafers",
+            "simple watches",
+            "cufflinks for men"
+          ],
+          "zara": [
+            "men's ethnic wear",
+            "beige pants",
+            "brown leather shoes",
+            "accessories for men",
+            "earth tone belts"
+          ],
+          "ajio": [
+            "men's kurta sets",
+            "dark brown trousers",
+            "mojari shoes for men",
+            "men's watches",
+            "cufflinks and tie pins"
+          ],
+          "nykaa_fashion": [
+            "men's traditional wear",
+            "beige and brown clothing",
+            "leather shoes for men",
+            "men's accessories",
+            "earth tone hats and caps"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-11T20:49:49.029913",
+      "occasion": "Date Night",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "25",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Off-the-shoulder or cold-shoulder blouse in a lightweight, pastel shade to add a touch of romance and femininity",
+          "bottom": "High-waisted, dark-washed skinny jeans or a flowy maxi skirt in a neutral shade to create a flattering silhouette",
+          "shoes": "Pair of heeled ankle boots or strappy sandals in a metallic or neutral shade to add a touch of glamour",
+          "accessories": "Simple yet elegant necklace, such as a delicate chain or a small pendant, and a pair of chandelier earrings to complete the look"
+        },
+        "hairstyle": "Soft, effortless waves or loose curls to add a touch of romance and whimsy to the overall look",
+        "color_palette": {
+          "primary": "Blush",
+          "secondary": "Mocha",
+          "accent": "Gold"
+        },
+        "explanation": "The recommended outfit and color palette are tailored to complement the user's olive skin tone, which looks best with earthy and warm shades. The pastel top and mocha bottom create a harmonious contrast, while the gold accent adds a touch of luxury. The soft waves or loose curls hairstyle adds a romantic touch, suitable for a date night. The overall look is modern, elegant, and trend-aware, and can be achieved within the budget of \u20b91,000 - \u20b93,000. The outfit is also suitable for Indian fashion preferences, with a mix of western and ethnic elements.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "women's off shoulder tops",
+            "high waisted jeans",
+            "heeled ankle boots",
+            "delicate chain necklaces",
+            "chandelier earrings"
+          ],
+          "myntra": [
+            "pastel shade blouses",
+            "dark wash skinny jeans",
+            "strappy sandals",
+            "simple necklaces",
+            " Statement earrings"
+          ],
+          "zara": [
+            "cold shoulder tops",
+            "flowy maxi skirts",
+            "metallic heels",
+            "minimalist jewelry",
+            "embellished clutches"
+          ],
+          "ajio": [
+            "women's romantic tops",
+            "high waisted trousers",
+            "block heel sandals",
+            "dainty necklaces",
+            "tassel earrings"
+          ],
+          "nykaa_fashion": [
+            "women's evening tops",
+            "dark wash leggings",
+            "stiletto heels",
+            "bold cocktail rings",
+            "choker necklaces"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-11T20:59:17.308662",
+      "occasion": "Formal",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "13",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Pastel pink silk blouse with intricate embroidery and a subtle sheen, featuring a relaxed fit and V-neckline",
+          "bottom": "Dark grey fitted trousers with a sleek, streamlined silhouette and a hint of stretch for comfort",
+          "shoes": "Gold-toned ankle-strap heels with delicate buckles and a low to moderate heel height, perfect for a formal occasion",
+          "accessories": "Minimalistic gold bar necklace, a pair of chandelier earrings, and a simple clutch bag in a neutral shade"
+        },
+        "hairstyle": "Soft, effortless waves achieved with a curling iron and a light-hold hairspray, paired with a delicate braided crown or a sleek low bun",
+        "color_palette": {
+          "primary": "Soft Peach",
+          "secondary": "Muted Charcoal",
+          "accent": "Rich Gold"
+        },
+        "explanation": "The recommended outfit and color palette cater to the user's olive skin tone by incorporating soft, warm shades that complement her natural glow. The pastel pink top and soft peach primary color create a harmonious contrast with her skin, while the dark grey trousers and muted charcoal secondary color provide a sleek, sophisticated backdrop. The gold-toned shoes and rich gold accent add a touch of luxury and elegance, perfect for a formal occasion. Considering the user's age, the outfit is modern, yet modest and tasteful. The budget of \u20b91,000 - \u20b93,000 is well-suited for the recommended pieces, which offer a balance of quality, style, and affordability. The overall look is trendy, refined, and tailored to Indian fashion preferences, with a focus on intricate details, rich textures, and timeless elegance.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "Pastel Pink Silk Blouse Women",
+            "Dark Grey Fitted Trousers Girls",
+            "Gold Ankle Strap Heels Low Height",
+            "Minimalistic Gold Bar Necklace",
+            "Soft Peach Clutch Bag Women"
+          ],
+          "myntra": [
+            "Embroidered Pink Top Women",
+            "Grey Slim Fit Trousers Girls",
+            "Gold Buckle Ankle Strap Heels",
+            "Delicate Gold Earrings Women",
+            "Peach Colored Clutch Bag"
+          ],
+          "zara": [
+            "Pink Blouse with Embroidery Women",
+            "Dark Grey Trousers Slim Fit",
+            "Gold Heeled Ankle Strap Shoes",
+            "Gold Minimalist Necklace",
+            "Soft Peach Bag Women"
+          ],
+          "ajio": [
+            "Silk Pink Blouse for Women",
+            "Grey Fitted Trousers for Girls",
+            "Gold Ankle Strap Heels for Women",
+            "Gold Bar Necklace for Women",
+            "Peach Clutch Bag for Women"
+          ],
+          "nykaa_fashion": [
+            "Pastel Pink Top for Women",
+            "Grey Trousers for Girls",
+            "Gold Heels for Women",
+            "Gold Earrings for Women",
+            "Peach Clutch for Women"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-11T21:24:28.696322",
+      "occasion": "Wedding",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "35",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Off-white or cream-colored silk blouse with intricate embroidery and a subtle sheen, featuring a round neckline and cap sleeves",
+          "bottom": "Dark green or emerald green heavily embellished lehenga with a flared silhouette and a comfortable length",
+          "shoes": "Pair of gold or bronze-colored heels with delicate ankle straps and a moderate heel height",
+          "accessories": "Statement gold or bronze-colored earrings, a delicate maang tikka, and a pair of bangles in a mix of gold and green"
+        },
+        "hairstyle": "A braided updo with loose, effortless waves framing the face, adorned with a few strategically placed hairpins and a sprinkle of hair accessories",
+        "color_palette": {
+          "primary": "Emerald Green",
+          "secondary": "Cream",
+          "accent": "Gold"
+        },
+        "explanation": "As an olive-skinned female, emerald green complements your skin tone by creating a stunning contrast. The dark green or emerald green lehenga will make your skin glow, while the off-white or cream-colored blouse will add a touch of warmth. The gold or bronze-colored accessories will enhance your overall appearance, drawing attention to your face. At 35, this outfit exudes elegance and sophistication, perfect for a wedding. The budget of \u20b91,000 - \u20b93,000 allows for a mix of high-street and affordable luxury brands, making this outfit achievable. The overall look is modern, trend-aware, and elegant, with a clear Indian fashion aesthetic.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "emerald green lehenga",
+            "off-white silk blouse",
+            "gold heels",
+            "indian wedding outfit",
+            "embellished lehenga"
+          ],
+          "myntra": [
+            "olive skin tone outfits",
+            "wedding guest dresses",
+            "green lehenga",
+            "ethnic wear",
+            "bridal wear"
+          ],
+          "zara": [
+            "green maxi dress",
+            "embellished tops",
+            "high heels",
+            "indian inspired clothing",
+            "wedding guest outfits"
+          ],
+          "ajio": [
+            "lehenga choli",
+            "wedding wear",
+            "green and gold outfit",
+            "indian fashion",
+            "ethnic wear for women"
+          ],
+          "nykaa_fashion": [
+            "wedding guest dresses",
+            "indian wear",
+            "lehenga sets",
+            "green and gold combination",
+            "olive skin tone friendly colors"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-12T09:07:09.948705",
+      "occasion": "Formal",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "60",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Silk blouse with intricate embroidery and a subtle sheen, featuring a classic round neckline and cap sleeves",
+          "bottom": "Floor-length, fitted formal trousers in a rich, dark shade that complements the top",
+          "shoes": "Pair of high-heeled, pointed-toe stilettos in a neutral color that elongates the legs",
+          "accessories": "Statement gold necklace with a delicate pendant, paired with chandelier earrings and a sleek, satin clutch"
+        },
+        "hairstyle": "Elegant, low bun with a few loose strands framing the face, adding a touch of sophistication and glamour",
+        "color_palette": {
+          "primary": "Emerald Green",
+          "secondary": "Neutral Beige",
+          "accent": "Rich Gold"
+        },
+        "explanation": "The recommended outfit is tailored to complement the user's olive skin tone, with the emerald green top creating a stunning contrast. The neutral beige trousers provide a sleek, formal base, while the rich gold accessories add a touch of luxury. The low bun hairstyle and statement jewelry elevate the overall look, making it perfect for a formal event. The budget of \u20b91,000 - \u20b93,000 allows for investment in high-quality, elegant pieces that will make a lasting impression. The combination of classic silhouettes, luxurious fabrics, and sophisticated colors ensures a modern, trend-aware, and personalized look that suits Indian fashion preferences.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "women formal blouses",
+            "floor length formal trousers",
+            "high heeled stilettos",
+            "formal clutch bags",
+            "statement gold necklaces"
+          ],
+          "myntra": [
+            "women-formal-blouses",
+            "women-formal-trousers",
+            "women-heeled-shoes",
+            "women-formal-clutches",
+            "women-statement-jewellery"
+          ],
+          "zara": [
+            "female formal tops",
+            "formal trousers for women",
+            "high heel shoes",
+            "elegant clutches",
+            "luxury jewelry for women"
+          ],
+          "ajio": [
+            "women formal wear",
+            "formal trousers for ladies",
+            "stiletto heels",
+            "satin clutches",
+            "gold jewelry for women"
+          ],
+          "nykaa_fashion": [
+            "women formal dresses",
+            "formal trousers for women",
+            "high heel sandals",
+            "evening clutches",
+            "statement earrings for women"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-12T09:22:14.087778",
+      "occasion": "Date Night",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "25",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Off-the-shoulder midi dress with a fitted bodice and a flared skirt",
+          "bottom": "None, as the dress is a single piece",
+          "shoes": "Black heeled ankle boots with a low to moderate heel",
+          "accessories": "Delicate silver necklace with a small pendant, a pair of chandelier earrings, and a small clutch bag"
+        },
+        "hairstyle": "Soft, loose waves with a slight tousle, pulled to one side to frame the face",
+        "color_palette": {
+          "primary": "Deep Berry",
+          "secondary": "Rich Gold",
+          "accent": "Soft Cream"
+        },
+        "explanation": "The off-the-shoulder midi dress is a great choice for a Date Night, as it is both feminine and elegant. The deep berry color complements the user's olive skin tone, while the rich gold secondary color adds a touch of sophistication. The soft cream accent color adds a romantic touch. The black heeled ankle boots elongate the legs and add a sleek touch to the overall outfit. The delicate silver necklace and chandelier earrings add a touch of glamour, while the small clutch bag is both practical and stylish. This outfit is modern, trend-aware, and suitable for Indian fashion preferences, and it fits within the user's budget of \u20b91,000 - \u20b93,000.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "women date night dresses",
+            "off-the-shoulder dresses",
+            "heeled ankle boots for women",
+            "delicate silver necklaces",
+            "small clutch bags"
+          ],
+          "myntra": [
+            "women-date-night-dresses",
+            "off-the-shoulder-dresses",
+            "heeled-ankle-boots-for-women",
+            "delicate-silver-necklaces",
+            "small-clutch-bags"
+          ],
+          "zara": [
+            "date night outfits for women",
+            "off the shoulder dresses",
+            "high heeled boots",
+            "delicate necklaces",
+            "small crossbody bags"
+          ],
+          "ajio": [
+            "women date night wear",
+            "off the shoulder midi dresses",
+            "heeled ankle boots",
+            "silver necklaces for women",
+            "small clutch bags for women"
+          ],
+          "nykaa_fashion": [
+            "date night dresses for women",
+            "off the shoulder dresses",
+            "heeled boots for women",
+            "delicate silver jewelry",
+            "small evening bags"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-12T09:23:51.350159",
+      "occasion": "Wedding",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "25",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Embroidered lehenga choli with intricate zari work and sequins",
+          "bottom": "Flowy lehenga skirt in rich silk fabric with elaborate embroidery",
+          "shoes": "Ethnic juttis with intricate gold and silver threading",
+          "accessories": "Traditional polki jewelry set with maang tikka, earrings, and bangles"
+        },
+        "hairstyle": "Braided updo with fresh flowers and a delicate maang tikka",
+        "color_palette": {
+          "primary": "Deep crimson",
+          "secondary": "Soft gold",
+          "accent": "Emerald green"
+        },
+        "explanation": "The recommended outfit is a perfect blend of traditional and modern elements, suitable for an Indian wedding. The olive skin tone of the user will complement the deep crimson and soft gold colors, while the emerald green accent will add a pop of freshness. The embroidered lehenga choli and flowy lehenga skirt will create a stunning silhouette, and the ethnic juttis will add a touch of elegance. The traditional polki jewelry set will complete the look, making the user feel like a royal bride. The braided updo with fresh flowers will add a romantic touch to the overall look. The budget of \u20b91,000 - \u20b93,000 will be sufficient to find a beautiful lehenga choli, juttis, and jewelry set within this price range.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "women wedding lehenga",
+            "lehenga choli for wedding",
+            "wedding juttis for women",
+            "polki jewelry set for wedding",
+            "wedding saree for women"
+          ],
+          "myntra": [
+            "women-wedding-lehengas",
+            "lehenga-choli-for-wedding",
+            "juttis-for-wedding",
+            "polki-jewellery-sets",
+            "wedding-sarees-for-women"
+          ],
+          "zara": [
+            "indian wedding outfit",
+            "lehenga choli online",
+            "wedding juttis",
+            "polki jewelry for wedding",
+            "wedding wear for women"
+          ],
+          "ajio": [
+            "women wedding wear",
+            "lehenga choli for wedding",
+            "ethnic juttis for women",
+            "polki jewelry sets",
+            "wedding sarees"
+          ],
+          "nykaa_fashion": [
+            "wedding lehenga for women",
+            "lehenga choli online shopping",
+            "juttis for wedding",
+            "polki jewelry for wedding",
+            "wedding sarees for women"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-12T09:25:44.957822",
+      "occasion": "haldi function",
+      "skin_tone": "Olive",
+      "gender": "Male",
+      "age": "15",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Yellow Kurta with intricate embroidery and a round neckline, made of lightweight cotton or silk blend",
+          "bottom": "White or Cream-colored Pyjamas with a loose fit and elastic waistband, perfect for a haldi function",
+          "shoes": "Brown or Beige Mojari or Jutti shoes with intricate designs and a comfortable fit",
+          "accessories": "Simple Kundan or Pearl necklace and a pair of elegant Cufflinks to complement the outfit"
+        },
+        "hairstyle": "A sleek and messy pompadour hairstyle with a slight texture and a hint of hair wax or pomade to add a touch of elegance",
+        "color_palette": {
+          "primary": "Yellow",
+          "secondary": "Cream",
+          "accent": "Gold"
+        },
+        "explanation": "The recommended outfit is specifically designed for a haldi function, taking into account the user's olive skin tone, age, and budget. The yellow kurta and white pyjamas are a classic combination for this occasion, while the brown mojari shoes add a touch of elegance. The simple kundan necklace and cufflinks complement the outfit without overpowering it. The hairstyle is sleek and stylish, perfect for a 15-year-old boy. The color palette is bright and cheerful, with yellow as the primary color, cream as the secondary color, and gold as the accent color. This combination will make the user stand out at the haldi function while staying within the budget of \u20b91,000 - \u20b93,000.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "male haldi function kurta",
+            "white pyjamas for haldi",
+            "mojari shoes for men",
+            "kundan necklace for men",
+            "haldi function outfit for boy"
+          ],
+          "myntra": [
+            "men-haldi-function-kurta",
+            "white-pyjamas-for-haldi",
+            "mojari-shoes-for-men",
+            "kundan-necklace-for-men",
+            "haldi-function-outfit-for-boy"
+          ],
+          "zara": [
+            "male haldi function outfit",
+            "haldi function kurta for men",
+            "traditional mojari shoes",
+            "indian kundan necklace",
+            "haldi function wear for boy"
+          ],
+          "ajio": [
+            "men haldi function wear",
+            "haldi function kurta for men",
+            "mojari shoes for haldi",
+            "kundan necklace for haldi",
+            "haldi function outfit for men"
+          ],
+          "nykaa_fashion": [
+            "men haldi function dress",
+            "haldi function kurta for boy",
+            "traditional mojari shoes for men",
+            "kundan necklace for haldi function",
+            "haldi function outfit for male"
+          ]
+        }
+      }
+    },
+    {
+      "email": "deepika.ayyadevara@gmail.com",
+      "date": "2026-02-12T10:14:20.034746",
+      "occasion": "Business",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "25",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Tailored white formal shirt with a subtle sheen, made from high-quality cotton or silk-blend fabric, featuring a classic collar and cuffed sleeves",
+          "bottom": "Navy blue tailored trousers with a streamlined fit, crafted from wool or wool-blend fabric, and a hint of stretch for comfort",
+          "shoes": "Black leather pointed-toe pumps with a low to moderate heel, featuring a sleek design and a comfortable insole",
+          "accessories": "Simple silver watch, a classic leather belt, and a pair of elegant silver stud earrings"
+        },
+        "hairstyle": "A sleek, low bun or a polished ponytail, which exudes professionalism and sophistication, while keeping hair out of the face",
+        "color_palette": {
+          "primary": "Navy Blue",
+          "secondary": "White",
+          "accent": "Silver"
+        },
+        "explanation": "The recommended outfit is tailored to complement the user's olive skin tone, with navy blue and white creating a harmonious contrast. The classic formal shirt and tailored trousers are timeless pieces that exude professionalism, while the black leather pumps add a touch of sophistication. The simple silver accessories and sleek hairstyle complete the polished look, suitable for a 25-year-old woman in a business setting. The budget of \u20b91,000 - \u20b93,000 allows for investment in high-quality, versatile pieces that can be mixed and matched to create multiple outfits.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "female business blazer",
+            "formal shirts for women",
+            "tailored trousers for women",
+            "leather pumps for women",
+            "women's formal dresses"
+          ],
+          "myntra": [
+            "women-formal-blazers",
+            "women-formal-shirts",
+            "women-tailored-trousers",
+            "women-leather-pumps",
+            "women-formal-dresses"
+          ],
+          "zara": [
+            "women's business attire",
+            "formal office wear",
+            "professional dresses",
+            "leather shoes for women",
+            "women's tailored suits"
+          ],
+          "ajio": [
+            "women's business wear",
+            "formal wear for women",
+            "office wear for women",
+            "women's leather footwear",
+            "women's formal clothing"
+          ],
+          "nykaa_fashion": [
+            "women's formal wear",
+            "business dresses for women",
+            "formal shirts for women",
+            "women's leather pumps",
+            "women's tailored trousers"
+          ]
+        }
+      }
+    },
+    {
+      "email": "saiharshinivalavoju@gmail.com",
+      "date": "2026-02-12T11:18:30.247076",
+      "occasion": "Business",
+      "skin_tone": "Olive",
+      "gender": "Female",
+      "age": "30",
+      "budget": "\u20b91,000 - \u20b93,000",
+      "result": {
+        "outfit": {
+          "top": "Navy blue formal shirt with a subtle sheen, made from high-quality cotton or silk blend, featuring a classic collar and cuffed sleeves",
+          "bottom": "Tailored white trousers with a streamlined fit, crafted from a stretchy wool or cotton blend, and a hint of stretch for comfort",
+          "shoes": "Pointed-toe black leather pumps with a low to moderate heel, approximately 2-3 inches, and a sleek, polished finish",
+          "accessories": "Simple, elegant silver watch, a classic leather belt, and understated pearl earrings"
+        },
+        "hairstyle": "A sleek, low bun or a polished, straight hairstyle, pulled back to showcase the face and emphasize a professional demeanor",
+        "color_palette": {
+          "primary": "Navy blue",
+          "secondary": "White",
+          "accent": "Deep charcoal grey"
+        },
+        "explanation": "The recommended outfit is tailored to complement the user's olive skin tone, age, and business occasion. The navy blue formal shirt and white trousers create a crisp, professional look, while the black leather pumps add a touch of sophistication. The simple accessories, such as the silver watch and pearl earrings, enhance the overall elegance of the outfit. The color palette is deliberately chosen to create a harmonious balance, with navy blue and white providing a classic, timeless combination, and deep charcoal grey adding a hint of depth and contrast. This outfit should fit within the user's budget of \u20b91,000 - \u20b93,000 and is suitable for a 30-year-old woman in a business setting.",
+        "shopping_keywords": {
+          "amazon_india": [
+            "female business blazer",
+            "formal shirts for women",
+            "white tailored trousers",
+            "black leather pumps",
+            "women's leather belts"
+          ],
+          "myntra": [
+            "women-formal-shirts",
+            "white-trousers-for-women",
+            "black-leather-pumps",
+            "women-leather-belts",
+            "women-formal-watches"
+          ],
+          "zara": [
+            "female business outfit",
+            "navy blue blazer",
+            "white tailored pants",
+            "black leather shoes",
+            "women's formal accessories"
+          ],
+          "ajio": [
+            "women business wear",
+            "formal shirts for ladies",
+            "tailored white trousers",
+            "black pumps for women",
+            "women's leather handbags"
+          ],
+          "nykaa_fashion": [
+            "women business dress",
+            "formal tops for women",
+            "white formal trousers",
+            "black leather footwear",
+            "women's formal jewelry"
+          ]
+        }
+      }
+    }
+  ]
+}
